@@ -24,6 +24,7 @@ class Usuario():
         else:
             for tarea in self.__tareas:
                 print(tarea)
+                print("=" *15)
 
     def tareas_pendientes(self):
         pendientes = [t for t in self.__tareas if not t.completada]
@@ -41,7 +42,7 @@ class Usuario():
             for tarea in completadas:
                 print(tarea)
     
-franco=Usuario("Franco","franco@gmail.com")
-franco.agregar_tarea()
-print("==================Listar tarea================")
-franco.listar_tareas()
+# franco=Usuario("Franco","franco@gmail.com")
+# franco.agregar_tarea()
+# print("==================Listar tarea================")
+# franco.listar_tareas()
