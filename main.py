@@ -1,5 +1,5 @@
 from user import Usuario
-
+from utils import pedir_campo_no_vacio, pedir_email_valido
 def mostrar_menu():
     print("\n=== Menú de Tareas ===")
     print("[1] Agregar tarea")
@@ -10,8 +10,8 @@ def mostrar_menu():
 
 def main():
     print("=== Sistema de Gestión de Tareas ===")
-    nombre = input("Ingresá tu nombre: ").strip()
-    email = input("Ingresá tu email: ").strip()
+    nombre = pedir_campo_no_vacio("Ingresá tu nombre: ")
+    email = pedir_email_valido()
 
     usuario = Usuario(nombre, email)
     print(f"\nUsuario creado: {usuario.nombre} - {usuario.email}")
